@@ -4,3 +4,7 @@ Final project for the course "Semantic Digital Libraries", Giovanni Colavizza @ 
 
 This project is still a <b>work in progress</b>.
 The website will be available at the following link [to be updated].
+
+## Credits
+- [Federica Bonifazi](mailto:federica.bonifazi@studio.unibo.it)
+- [Orsola Maria Borrini](mailto:orsolamaria.borrini@studio.unibo.it)
