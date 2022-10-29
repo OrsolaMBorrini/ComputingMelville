@@ -11,14 +11,16 @@
         <link href="css/styles.css" rel="stylesheet" />
 
         <!-- Google Fonts -->
-        <style> @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
 
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Computing Melville</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -30,29 +32,25 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-primary bg-gradient text-white">
+        <div class="header bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">Computing Melville</h1>
-                <p class="lead">An automated HTR campaign on Transkribus</p>
-                <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+                <p class="subtitle">An automated HTR campaign on Transkribus</p>
+                <!-- ELIMINARE QUESTO BOTTONE?? <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a> -->
             </div>
-            <!-- First attempt at waves effect -->
-            <div class="wavesDiv">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
                 </defs>
                 <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
                 </g>
-                </svg>
-                </div>
-                <!--Waves end-->
-        </header>
+            </svg>
+        </div>
 
         <!-- About section-->
         <section id="about">
@@ -100,13 +98,23 @@
             </div>
         </section>
 
-        <!-- Team section-->
-        <section id="team">
+        <section class="testimonials text-center">
             <div class="container px-4">
+                <h2 class="mb-5">The team</h2>
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>The team</h2>
-                        <p class="lead">Cioè, davvero brave, oh</p>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/team/duck.jpg" alt="..." />
+                            <h5>Federica Bonifazi</h5>
+                            <p>"Siamo davvero brave"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/team/croco.jpg" alt="..." />
+                            <h5>Orsola Maria Borrini</h5>
+                            <p>"Ohi ohi dobbiamo smazzarci"</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -78,7 +78,8 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Poppins', sans-serif; /* Font family forced by us for the body */
+  /* font-family: var(--bs-body-font-family); */
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -102,7 +103,7 @@ hr:not([size]) {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -111,7 +112,8 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 /* New font for the title */
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem !important;
+  font-weight: 700;
+  font-size: 4rem !important;
 }
 
 h1, .h1 {
@@ -451,6 +453,7 @@ legend + * {
   direction: ltr;
 }
 */
+
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -501,6 +504,11 @@ progress {
 /* Aggiunta di una nuova classe per il testo per i paragrafi minori */
 .minor {
   font-size: 1.10rem;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -4060,14 +4068,18 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
+
 .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -7502,10 +7514,11 @@ textarea.form-control-lg {
   padding-bottom: 1.5rem !important;
 }
 
+/* FOOTER HEIGHT ADJUSTED BY DELETING THIS
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
-}
+} */
 
 .pt-0 {
   padding-top: 0 !important;
@@ -7687,6 +7700,7 @@ textarea.form-control-lg {
 .text-center {
   text-align: center !important;
   padding-top: 5em; /* This is for the title Computing Melville */
+  padding-bottom: 5.5em;
 }
 
 .text-decoration-none {
@@ -7899,9 +7913,9 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
 }
 
-.bg-gradient {
+/* .bg-gradient {
   background-image: var(--bs-gradient) !important;
-}
+} */
 
 .user-select-all {
   -webkit-user-select: all !important;
@@ -11304,14 +11318,12 @@ html {
   scroll-padding-top: 3.5rem;
 }
 
-header {
+.header {
   padding-top: 9.5rem;
-  padding-bottom: 6rem;
-  height: 80vh;
+  position: relative;
+  text-align: center;
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 }
-
-
 
 section {
   padding-top: 9rem;
@@ -11319,25 +11331,19 @@ section {
 }
 
 /* Waves */
-
-/* QUESTO è DA SISTEMARE PERCHé STRINGENDO LA FINESTRA SI VEDE IL GAP */
 .wavesDiv {
-  /*position: relative;
-  top: 25vh;*/
-  padding-top: inherit;
-}
+  background-color: blue;
+} 
 
 .waves {
   position:relative;
   width: 100%;
-  height:15vh;
   margin-bottom:-7px; /*Fix for safari gap*/
   min-height:100px;
   max-height:150px;
 }
 
 /* Waves Animation */
-
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
@@ -11377,4 +11383,18 @@ section {
   h1 {
     font-size:24px;
   }
+}
+
+/* Team section */
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
 }
