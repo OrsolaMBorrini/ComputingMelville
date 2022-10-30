@@ -7700,7 +7700,7 @@ textarea.form-control-lg {
 .text-center {
   text-align: center !important;
   padding-top: 5em; /* This is for the title Computing Melville */
-  padding-bottom: 5.5em;
+  padding-bottom: 4em;
 }
 
 .text-decoration-none {
@@ -11318,12 +11318,10 @@ html {
   scroll-padding-top: 3.5rem;
 }
 
-.header {
+#header {
   padding-top: 9.5rem;
   position: relative;
   text-align: center;
-  background-color: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  background-image: url('assets/bbCh1-1.jpg');
 }
 
 section {
