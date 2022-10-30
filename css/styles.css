@@ -11322,8 +11322,8 @@ html {
   padding-top: 9.5rem;
   position: relative;
   text-align: center;
-  background-color: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  background-image: url('assets/bbCh1-1.jpg');
+  background: linear-gradient(rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%), url('assets/bbCh1-1.jpg') !important;
+  /* background-color: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%) !important;*/
 }
 
 section {
@@ -11332,7 +11332,6 @@ section {
 }
 
 /* Waves */
-
 .waves {
   position:relative;
   width: 100%;
