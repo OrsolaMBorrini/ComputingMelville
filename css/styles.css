@@ -11318,6 +11318,7 @@ html {
   scroll-padding-top: 3.5rem;
 }
 
+
 #header {
   padding-top: 9.5rem;
   position: relative;
@@ -11327,6 +11328,38 @@ html {
 section {
   padding-top: 9rem;
   padding-bottom: 9rem;
+}
+
+/* Image */
+
+.image {
+  border-radius: 3px;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+@media screen and (max-width: 736px) {
+  .image.fitting {
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%;
+    }
+}
+
+.relative {
+  position: absolute;
+  top: 120%;
+  right: 0%;
+  width: 30%;
+  height: auto;
+}
+
+/* Responsive image of Melville profile */
+@media only screen and (max-width: 1080px){
+  #hm-profile {
+    display:none;
+  }
 }
 
 /* Waves */
