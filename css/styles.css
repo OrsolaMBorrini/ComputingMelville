@@ -113,7 +113,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 4rem !important;
+  font-size: 4.5rem !important;
 }
 
 h1, .h1 {
@@ -11325,9 +11325,21 @@ html {
   text-align: center;
 }
 
-section {
+#expandbutton {
+  color: #ffffff;
+  padding-top: 1em;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+#about {
   padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-bottom: 5rem;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 /* Image */
@@ -11347,17 +11359,29 @@ section {
     }
 }
 
-.relative {
+.relative-hm {
   position: absolute;
-  top: 120%;
+  top: 118%;
   right: 0%;
-  width: 30%;
+  width: 26%;
   height: auto;
 }
 
-/* Responsive image of Melville profile */
+.relative-sh {
+  position: absolute;
+  top: 287%;
+  left: 0%;
+  rotate: -5deg;
+  width: 20%;
+  height: auto;
+}
+
+/* Responsive images overlapping with sections (Melville and ship) */
 @media only screen and (max-width: 1080px){
   #hm-profile {
+    display:none;
+  }
+  #ship {
     display:none;
   }
 }
@@ -11412,6 +11436,7 @@ section {
     font-size:24px;
   }
 }
+
 
 /* Team section */
 
