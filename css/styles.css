@@ -255,6 +255,16 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+/* Modifying the colors of the link inside the body text */
+p a {
+  color: rgb(71 93 203);
+  text-decoration: none;
+}
+p a:hover {
+  color: rgb(71 93 203);
+  font-weight: bold;
+}
+
 pre,
 code,
 kbd,
