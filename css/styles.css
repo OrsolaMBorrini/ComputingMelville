@@ -214,7 +214,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 small, .small {
@@ -11371,7 +11371,7 @@ section {
 
 .relative-hm {
   position: absolute;
-  top: 118%;
+  top: 140%;
   right: 0%;
   width: 26%;
   height: auto;
