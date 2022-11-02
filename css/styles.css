@@ -257,12 +257,11 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 /* Modifying the colors of the link inside the body text */
 p a {
-  color: rgb(71 93 203);
+  color: rgb(38 82 177);
   text-decoration: none;
 }
 p a:hover {
-  color: rgb(71 93 203);
-  font-weight: bold;
+  color: rgb(38, 152, 177);
 }
 
 pre,
