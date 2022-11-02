@@ -85,18 +85,63 @@
                         <h3>Task definition</h3>
                             <p class="minor">In this project's pipeline, the task definition step was fundamental: to perform <b>supervised training</b> on a ML model such as ours, it was crucial to first provide it with an <b>annotated corpus</b> to be used as a training set and a <b>raw corpus</b> for the evaluation phase.</p>
                         <h4>Corpus selection</h4>
-                            <p>When selecting our starting corpus, we have decided to <b>reuse the data of the <a href="https://mel.netlify.app/">Melville Electronic Library</a></b>: the <b>"Versions of Billy Budd"</b>, an edition comprising not only the reading text but also MEL's TextLab platform, displaying all manuscript leaves and their diplomatic transcription; and digital images of the <b>"Rip Van Winkle's Lilac"</b> manuscript.
+                            <p>When selecting our starting corpus, we have decided to <b>reuse the data of the <a href="https://mel.netlify.app/">Melville Electronic Library</a></b>: we have selected 16 chapters from <b>"Versions of Billy Budd"</b>, an edition comprising not only the reading text but also MEL's TextLab platform, displaying all manuscript leaves and their diplomatic transcription to be used as our training corpus, while digital images of the <b>"Rip Van Winkle's Lilac"</b> manuscript were adopted as the validation set.
                             </p>
                         <h4>Annotation Model</h4>
-                            <p>Due to the complexity in interpreting the text from the manuscripts, given also the amount of data, we have decided to <b>rely on the transcriptions made available</b> by the MEL. However, we have employed specific solutions for the challenges related to the peculiarities of Melville's last novella: the original manuscript showcases many leaves and leaf fragments, clearly suggesting the many revisions put in place by the author and complicating the ML task.</p>
+                            <p>Due to the complexity in interpreting the text from the manuscripts, given also the amount of data, we have decided to <b>rely on the transcriptions made available</b> by the MEL for the development of our training corpus.<br>
+                                However, we have employed <b>specific solutions</b> for the challenges related to the peculiarities of Melville's last novella: the original manuscript showcases many leaves and leaf fragments, clearly suggesting the many revisions put in place by the author and complicating the ML task:
+                            <ul>
+                                <li>When leaves of the manuscript display <b>mounts</b> covering large parts of strikethrough text, we have decided to only consider and transcribe the leaf closer to the final authorial version (that is, the leaf <i>with</i> the mount)</li>
+                                <li>As we are more interested in showcasing an "analytic" transcription of Melville's manuscripts, we have left every <b>addition to the text</b> in its original position on the page</li>
+                                <li>All the <b>numbers</b> present on the pages, both at the top and bottom, have been ignored, as the original source of the image does not state clearly their provenance and we are interested in Melville's handwriting only</li>
+                                <li>All the <b>section breaks' glyphs</b> between the chapters have not been transcribed to avoid any confusion in the recognition of the characters</li>
+                                <li>Any <b>other mark</b> present on the page but not related to the content of the novella (e.g. circles, pencil smears) has been discarded</li>
+                            </ul></p>
                         <h4>Annotation Guidelines</h4>
-                            <p>Some text here</p>
+                            <p>We have followed <b><a href="https://readcoop.eu/transkribus/howto/transkribus-transcription-conventions/">Transkribus' Transcription Conventions</a></b>, adapting them to our data when needed.<br>
+                            In particular, <b>strikethrough</b> and <b>superscript</b> text passages have proved to be a challenge.
+                            <ol>
+                                <li><b>Strikethrough text passages</b>
+                                    <ul>
+                                        <li>Always to be tagged as <code>strikethrough</code> when appearing inline with the rest of the text line</li>
+                                        <li>When co-occurring with superscript, the latter tag is to be preferred</li>
+                                    </ul>
+                                </li>
+                                <li><b>Superscript text passages</b>
+                                    <ul>
+                                        <li>When the x-height of the characters is included in the main line area, tag it as <code>superscript</code>, otherwise add an extra line just for the superscript, considering it as normal text (with edge cases, it is preferred to add an extra line)</li>
+                                        <li>With more than one superscript text, spaced out across the length of the main line:
+                                            <blockquote>
+                                                <ul>
+                                                    <li>With no interruption, consider the superscript words as part of the same extra line and add 5 blank spaces between them</li>
+                                                    <li>With an interrpution (e.g. another superscript word is included in the main line area), add different extra lines for each superscript word</li>
+                                                </ul>
+                                            </blockquote>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            We have also put in place our own decisions when it came to <b>underlined text passages</b> (which we have ignored) and <b>additions</b> (<u>see</u>: Annotation Model section). 
+                            </p>
                         <h4>Evaluation of results</h4>
-                            <p>Some text here</p>
+                            <p>First, each of us processed 10 leaves of the Billy Budd's manuscript on Transkribus, doing both the layout parsing and the transcription. Then, we swapped the datasets and checked whether we agreed with the decision of the other annotator or not. In case of disagreement, we have discussed and changed our annotating and transcription parameters accordingly. This was also our first pilot campaign, whose results are described further on.</p>
                     </div>
                     <div class="col-lg-8">
                         <h3>Pilot</h3>
-                        <p class="minor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="minor">We performed, overall, three different pilot campaigns:
+                            <ol>
+                                <li>The first one, on 20 leaves of the manuscript (specifically, the leaves 1-10 of the first and second chapters), led to the following adjustments:
+                                        <ul>
+                                            <li>How to handle superscript and strikethrough text passages</li>
+                                            <li>How to handle text not transcribed by MEL's experts: we do not include it in the text region and avoid transcribing it ourselves</li>
+                                            <li>Keep the different dashes as in the MEL's transcriptions in order to avoid confusion between composed words (short dash: -) and other occurrences (long dash: —)</li>
+                                        </ul>
+                                </li>
+                                <li>The second pilot was carried out on 20 other leaves of the manuscript (11-20 of the first chapter, 11-14 of the second and 1-6 of the fourth chapter) and allowed us to better define how to handle multiple spaced out superscript text passages
+                                </li>
+                                <li>The third and final pilot was carried out randomly during the first moments of the final annotation campaign: each of us selected random leaves annotated by the other and eventually discussed different decisions, further refining the annotation model</li>
+                            </ol>
+                        </p>
                     </div>
                     <div class="col-lg-8">
                         <h3>Campaign</h3>
