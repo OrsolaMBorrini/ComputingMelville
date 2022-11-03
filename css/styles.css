@@ -11385,6 +11385,25 @@ section {
   height: auto;
 }
 
+.relative-wvR {
+  position: absolute;
+  top: 287%;
+  left: 0%;
+  rotate: -5deg;
+  width: 20%;
+  height: auto;
+}
+
+
+.relative-wvL {
+  position: absolute;
+  top: 287%;
+  left: 0%;
+  rotate: -5deg;
+  width: 20%;
+  height: auto;
+}
+
 /* Responsive images overlapping with sections (Melville and ship) */
 @media only screen and (max-width: 1080px){
   #hm-profile {
