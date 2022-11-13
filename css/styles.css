@@ -11479,3 +11479,20 @@ section {
   max-width: 12rem;
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
+
+/* Footer */
+
+.invertsignature {
+  max-width: 20%;
+  max-height: 20%;
+  padding: 0.2rem;
+  filter: invert(1);
+}
+
+.footer-a {
+  color: rgb(38, 152, 177);
+  text-decoration: none;
+}
+.footer-a:hover {
+  color: rgb(38 82 177);
+}
