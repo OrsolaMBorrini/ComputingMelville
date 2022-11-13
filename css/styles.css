@@ -153,7 +153,9 @@ h4, .h4 {
 }
 
 h5, .h5 {
+  font-family: 'Playfair Display';
   font-size: 1.25rem;
+  font-weight: 700;
 }
 
 h6, .h6 {
@@ -11327,7 +11329,6 @@ html {
   scroll-padding-top: 3.5rem;
 }
 
-
 #header {
   padding-top: 9.5rem;
   position: relative;
@@ -11372,7 +11373,7 @@ section {
   position: absolute;
   top: 140%;
   right: 0%;
-  width: 26%;
+  width: 24%;
   height: auto;
 }
 
@@ -11388,12 +11389,11 @@ section {
 .relative-wvR {
   position: absolute;
   top: 287%;
-  left: 0%;
+  right: 0%;
   rotate: -5deg;
   width: 20%;
   height: auto;
 }
-
 
 .relative-wvL {
   position: absolute;
@@ -11410,6 +11410,9 @@ section {
     display:none;
   }
   #ship {
+    display:none;
+  }
+  #v-waves {
     display:none;
   }
 }
@@ -11478,6 +11481,10 @@ section {
 .testimonials .testimonial-item img {
   max-width: 12rem;
   box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+#mailbutton {
+  padding: 0.3em;
 }
 
 /* Footer */
