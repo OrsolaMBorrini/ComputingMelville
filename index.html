@@ -101,36 +101,99 @@
                         <h4>Annotation Model</h4>
                             <p>Due to the complexity in interpreting the text from the manuscripts, given also the amount of data, we have decided to <b>rely on the transcriptions made available</b> by the MEL for the development of our training corpus.<br>
                                 However, we have employed <b>specific solutions</b> for the challenges related to the peculiarities of Melville's last novella: the original manuscript showcases many leaves and leaf fragments, clearly suggesting the many revisions put in place by the author and complicating the ML task:
-                            <ul>
-                                <li>When leaves of the manuscript display <b>mounts</b> covering large parts of strikethrough text, we have decided to only consider and transcribe the leaf closer to the final authorial version (that is, the leaf <i>with</i> the mount)</li>
-                                <li>As we are more interested in showcasing an "analytic" transcription of Melville's manuscripts, we have left every <b>addition to the text</b> in its original position on the page</li>
-                                <li>All the <b>numbers</b> present on the pages, both at the top and bottom, have been ignored, as the original source of the image does not state clearly their provenance and we are interested in Melville's handwriting only</li>
-                                <li>All the <b>section breaks' glyphs</b> between the chapters have not been transcribed to avoid any confusion in the recognition of the characters</li>
-                                <li>Any <b>other mark</b> present on the page but not related to the content of the novella (e.g. circles, pencil smears) has been discarded</li>
-                            </ul></p>
+                                <div class="table-responsive-lg">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Issue</th>
+                                                <th scope="col">Example</th>
+                                                <th scope="col">Solution</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Mounts</th>
+                                                <td><img src="assets/examples/mounts_6-187.jpg" class="table-img"></td>
+                                                <td class="table-txt">When leaves of the manuscript display <b>mounts</b> covering large parts of strikethrough text, we have decided to only consider and transcribe the leaf closer to the final authorial version (that is, the leaf <i>with</i> the mount)</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Additions</th>
+                                                <td><img src="assets/examples/additions_1-17.jpg" class="table-img"></td>
+                                                <td class="table-txt">As we are more interested in showcasing an "analytic" transcription of Melville's manuscripts, we have left every <b>addition to the text</b> in its original position on the page</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Numbers</th>
+                                                <td><img src="assets/examples/numbers_1-47.jpg" class="table-img"></td>
+                                                <td class="table-txt">All the <b>numbers</b> present on the pages, both at the top and bottom, have been ignored, as the original source of the image does not state clearly their provenance and we are interested in Melville's handwriting only</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Breaks</th>
+                                                <td><img src="assets/examples/breaks_1-75.jpg" class="table-img"></td>
+                                                <td class="table-txt">All the <b>section breaks' glyphs</b> between the chapters have not been transcribed to avoid any confusion in the recognition of the characters</td>
+                                            <tr>
+                                                <th scope="row">Marks</th>
+                                                <td><img src="assets/examples/signs_8-243.jpg" class="table-img"></td>
+                                                <td class="table-txt">Any <b>other mark</b> present on the page but not related to the content of the novella (e.g. circles, pencil smears) has been discarded</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
                         <h4>Annotation Guidelines</h4>
                             <p>We have followed <b><a href="https://readcoop.eu/transkribus/howto/transkribus-transcription-conventions/">Transkribus' Transcription Conventions</a></b>, adapting them to our data when needed.<br>
                             In particular, <b>strikethrough</b> and <b>superscript</b> text passages have proved to be a challenge.
                             <ol>
-                                <li><b>Strikethrough text passages</b>
-                                    <ul>
-                                        <li>Always to be tagged as <code>strikethrough</code> when appearing inline with the rest of the text line</li>
-                                        <li>When co-occurring with superscript, the latter tag is to be preferred</li>
-                                    </ul>
-                                </li>
-                                <li><b>Superscript text passages</b>
-                                    <ul>
-                                        <li>When the x-height of the characters is included in the main line area, tag it as <code>superscript</code>, otherwise add an extra line just for the superscript, considering it as normal text (with edge cases, it is preferred to add an extra line)</li>
-                                        <li>With more than one superscript text, spaced out across the length of the main line:
-                                            <blockquote>
-                                                <ul>
-                                                    <li>With no interruption, consider the superscript words as part of the same extra line and add 5 blank spaces between them</li>
-                                                    <li>With an interrpution (e.g. another superscript word is included in the main line area), add different extra lines for each superscript word</li>
-                                                </ul>
-                                            </blockquote>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <b>Strikethrough text passages</b>
+                                <div class="table-responsive-lg">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Example</th>
+                                                <th scope="col">Solution</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/strikethrough_8-237.jpg" class="table-img"></th>
+                                                <td class="table-txt">Always to be tagged as <code>strikethrough</code> when appearing inline with the rest of the text line</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/superstrike_8-243.jpg" class="table-img"></th>
+                                                <td class="table-txt">When co-occurring with superscript, the latter tag is to be preferred</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <b>Superscript text passages</b>
+                                <div class="table-responsive-lg">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Example</th>
+                                                <th scope="col">Solution</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/inlinesuper.jpg" class="table-img"></th>
+                                                <td class="table-txt">When the x-height of the characters is included in the main line area, tag it as <code>superscript</code></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/twolines_1-23.jpg" class="table-img"></th>
+                                                <td class="table-txt">When the x-height of the characters is <b>not</b> included in the main line area add an extra line just for the superscript, considering it as normal text (with edge cases, it is preferred to add an extra line)</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/fivespaces_6-1.jpg" class="table-img"></th>
+                                                <td class="table-txt">With more than one superscript text, spaced out across the length of the main line, if there are no interruptions, consider the superscript words as part of the same extra line and add 5 blank spaces between them</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img src="assets/examples/nospaces_3-3.jpg" class="table-img"></th>
+                                                <td class="table-txt">With more than one superscript text, spaced out across the length of the main line, if there are interrputions (e.g. another superscript word is included in the main line area), add different extra lines for each superscript word</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </ol>
                             We have also put in place our own decisions when it came to <b>underlined text passages</b> (which we have ignored) and <b>additions</b> (<u>see</u>: Annotation Model section). 
                             </p>
