@@ -29,7 +29,16 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#documentation">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#documentation" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                            <!-- Here's the magic. Add the .animate and .slideIn classes to your .dropdown-menu and you're all set! -->
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#begDoc">Task Definition</a>
+                              <a class="dropdown-item" href="#pilot">Pilot</a>
+                              <a class="dropdown-item" href="#campaign">Campaign</a>
+                              <a class="dropdown-item" href="#pubUse">Publication and use</a>
+                            </div>
+                          </li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     </ul>
                 </div>
@@ -76,7 +85,7 @@
         <img src="assets/vw_R.png" id="v-waves" class="image fitting relative-wvR">
 
         <!-- Documentation section-->
-        <section class="bg-light" id="documentation">
+        <section class="bg-light" id="begDoc">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -128,7 +137,7 @@
                         <h4>Evaluation of results</h4>
                             <p>First, each of us processed 10 leaves of the Billy Budd's manuscript on Transkribus, doing both the layout parsing and the transcription. Then, we swapped the datasets and checked whether we agreed with the decision of the other annotator or not. In case of disagreement, we have discussed and changed our annotating and transcription parameters accordingly. This was also our <b>first pilot campaign</b>, whose results are described further on.</p>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" id="pilot">
                         <h3>Pilot</h3>
                         <p class="minor">We performed, overall, three different pilot campaigns:
                             <ol>
@@ -145,7 +154,7 @@
                             </ol>
                         </p>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" id="campaign">
                         <h3>Campaign</h3>
                         <p class="minor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
                         <h4>Corpus Annotation</h4>
@@ -157,7 +166,7 @@
                         <h4>Further work</h4>
                         <p>Certainly, this is only the beginning of what could be a much more extent campaign on Melville's original manuscripts. The limited dimensions of our team and, consequently, of the corpus we annotated <b><i>(of the work we were able to manage?)</i></b>, definitely prevented us from tackling a more in-depth research on the topic. Some improvements could certainly be made by <b>expanding the training corpus</b> and by <b>using HQ images</b> (we could only take screenshots from MEL's website, as there is no download tool made available).<br>However, we are fairly convinced that this project could stand as an inspiring push towards authorial annotation campaigns by means of AI and ML systems.</p>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" id="pubUse">
                         <h3>Publication and use</h3>
                         <p class="minor">In designing our annotation campaign, we have tried to apply the <a href="https://www.go-fair.org/fair-principles/"><b>FAIR principles</b></a> for data publication, making the results of our research findable, accessible, interoperable and reusable.</p>
                         <p><a href="" download><span class="material-symbols-outlined icon-align">file_download</span></a>In addition to the documentation provided in this website, you can freely download the full report about this transcription and annotation campaign.</p>
@@ -207,5 +216,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
