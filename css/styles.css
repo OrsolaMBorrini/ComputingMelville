@@ -11509,3 +11509,19 @@ section {
 .footer-a:hover {
   color: rgb(38 82 177);
 }
+
+/* Table */
+
+.table-txt { 
+  vertical-align: middle;
+}
+
+th {
+  vertical-align: middle;
+
+}
+
+.table-img {
+  width: 100%;
+}
+
