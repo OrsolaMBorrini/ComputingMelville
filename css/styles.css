@@ -11432,18 +11432,16 @@ section {
 
 .relative-sh {
   position: absolute;
-  top: -650%;
+  top: 750%;
   left: 0%;
-  rotate: -5deg;
   width: 20%;
   height: auto;
 }
 
 .relative-wvR {
   position: absolute;
-  top: 287%;
+  top: 500%;
   right: 0%;
-  rotate: -5deg;
   width: 20%;
   height: auto;
 }
