@@ -11578,3 +11578,35 @@ th {
   width: 100%;
 }
 
+/*SLIDER COMPARISON*/
+
+.img-comp-container {
+  position: relative;
+  height: 250px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 30px;
+  height: 30px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+
