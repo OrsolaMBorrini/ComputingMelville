@@ -191,7 +191,7 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">Mounts</th>
-                                                <td><img src="assets/examples/mounts_6-187.jpg" class="table-img" alt="Billy Budd, Ch. 6, pg. 187"></td>
+                                                <td><img src="assets/examples/mounts_6-187.jpg" class="table-img" alt="Billy Budd, Ch. 6, pg. 187" title="Click to zoom in!"></td>
                                                 <td class="table-txt">When leaves of the manuscript display mounts covering large parts of strikethrough text, we have decided to <b>only consider and transcribe the leaf closer to the final authorial version</b> (that is, the leaf <i>with</i> the mount)</td>
                                             </tr>
                                             <tr>
@@ -294,12 +294,14 @@
                     </div>
                     <div class="col-lg-8" id="campaign">
                         <h3>Campaign</h3>
-                        <p class="minor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="minor">Once the pilot were over and </p>
                         <h4>Corpus Annotation</h4>
-                        <p>Qua scrivere qualcosa</p>
+                        <p>Once the two annotators reached an agreement on how to follow the guidelines derived from the previous pilots, the proper annotation campaign finally began, with the annotation of the remainder of the selected corpus. Chapters from 1 to 16 of Melville's "Billy Budd" and the last 7 pages of "RIP Van Winkle's Lilac" containing the homonymous poem were fully annotated, using the online software Transkribus Lite and reaching a total of 175 pages and more than 17000 words.</p>
                         <h4>Training the models</h4>
-                        <p>Eheh e qua c'è molto da dire</p>
-                        <p>To sum up:</p>
+                        <p>The annotated data were then used to train a recognition-model on the same software, although in the downloaded version. Two models were trained, both having as <b>Traning Set</b> the whole 16 chapters from "Billy Budd" and as <b>Validation Set</b> the pages from "RIP Van Winkle's Lilac", however to one of the two a <b>base model</b> 
+                            for English handwriting was added to refine the recognition process.<br>Both models were trained relying on the PyLaia HTR engine supported by Transkribus and the paramethers were defined according to Transkribus guidelines on <a href="https://readcoop.eu/transkribus/howto/how-to-train-a-handwritten-text-recognition-model-in-transkribus/">How To Train and Apply Handwritten Text Recognition Models in Transkribus</a>. 
+                            For both models we sticked to a default early stopping of 50 epochs and a learning rate of 0,0001%, while for the model training with the addition of the English handwriting base model the total number of epochs was lowered from 250 to 150 according to the already high number of training data.<br><p> 
+                        
                         <div class="table-responsive-lg">
                             <table class="table">
                                 <thead>
@@ -307,7 +309,7 @@
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <th scope="col">Melville Handwriting</th>
-                                        <th scope="col">Melville Handwriting on Base Model</th>
+                                        <th scope="col">Melville Handwriting w/ Base Model</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -327,25 +329,11 @@
                                         <td class="table-txt">0,0001</td>
                                         <td class="table-txt">0,0001</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row" rowspan="3">Results</th>
-                                        <th scope="row">CER on Train Set</th>
-                                        <td class="table-txt">13,11%</td>
-                                        <td class="table-txt">9,00%</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">CER on Validation Set</th>
-                                        <td class="table-txt">15,30%</td>
-                                        <td class="table-txt">8,80%</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Best WER</th>
-                                        <td class="table-txt">46,7%</td>
-                                        <td class="table-txt">28,1%</td>
-                                    </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div>        
+                
+                        <p>The accuracy of the resulting two models can be compared by analysing their Learning Curve (shown in the graphs below) indicating the variation of the <b>Character Error Rate</b> (i.e. the percentage of characters that have been transcribed incorrectly by the Text Recognition model) for number of epochs.</p>
                         <div class="img-comp-container">
                             <div class="img-comp-img">
                               <img src="assets/training/MelvilleHandwriting3.1_Graph.jpg" height="290">
@@ -354,8 +342,49 @@
                               <img src="assets/training/MelvilleHandwritingBased.jpg" height="290">
                             </div>
                         </div>
+                        <p style="padding-top: 20px">In the graphs the blue line represents the progress made by the model on the the Training Set whereas the red one represents the progress of evaluations on the Validation Set, on which the program tests itself after the training. 
+                            The trend and final value of the CER for the Validation Set is of course the most significant as it shows how the model is capable of generalising, performing on pages that it has not been trained on. 
+                            The results of the model trained with the addition of the English handwriting Base Model are slightly better performative than the one of the other model, as a CER of 10% or below can be seen as very efficient for automated transcription; however even the model with no addition staying with a CER lower than 20% is more than sufficient to work with and couuld definitely be improved with further work.<p>
+                            <div class="table-responsive-lg">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Melville Handwriting</th>
+                                            <th scope="col">Melville Handwriting w/ Base Model</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" rowspan="3">Results</th>
+                                            <th scope="row">CER on Train Set</th>
+                                            <td class="table-txt">13,11%</td>
+                                            <td class="table-txt">9,00%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CER on Validation Set</th>
+                                            <td class="table-txt">15,30%</td>
+                                            <td class="table-txt">8,80%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Best WER</th>
+                                            <td class="table-txt">46,7%</td>
+                                            <td class="table-txt">28,1%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         <h4>Critical Issues</h4>
-                        <p>AAAAAAAAAAAAAaaa</p>
+                        <p>Comparing the transcription made on the Validation Set by the annotators and by the transcription models some criticalities jump to the eyes and are worth being highlightened. As shown in the comparison below (annotators' transcription -green- and trained model without base model -red-) on the first page of "RIP Van Winkle's Lilac" it's clear that despite being correctly tagged during the annotation campaign, nor strikethroughs nor superscripts have been correctly recognized by the model during the training.</p>
+                        <div class="img-comp-container">
+                            <div class="img-comp-img">
+                              <img src="assets/training/CompareFalse.jpg" height="200">
+                            </div>
+                            <div class="img-comp-img img-comp-overlay">
+                              <img src="assets/training/CompareTrue.jpg" height="200">
+                            </div>
+                        </div>
                         <h4>Further work</h4>
                         <p>Certainly, this is only the beginning of what could be a much more extent campaign on Melville's original manuscripts. The limited dimensions of our team and, consequently, of the corpus we annotated <b><i>(of the work we were able to manage?)</i></b>, definitely prevented us from tackling a more in-depth research on the topic. Some improvements could certainly be made by <b>expanding the training corpus</b> and by <b>using HQ images</b> (we could only take screenshots from MEL's website, as there is no download tool made available).<br>However, we are fairly convinced that this project could stand as an inspiring push towards authorial annotation campaigns by means of AI and ML systems.</p>
                     </div>
