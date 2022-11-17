@@ -298,9 +298,14 @@
                         <h4>Corpus Annotation</h4>
                         <p>Once the two annotators reached an agreement on how to follow the guidelines derived from the previous pilots, the proper annotation campaign finally began, with the annotation of the remainder of the selected corpus. Chapters from 1 to 16 of Melville's "Billy Budd" and the last 7 pages of "RIP Van Winkle's Lilac" containing the homonymous poem were fully annotated, using the online software Transkribus Lite and reaching a total of 175 pages and more than 17000 words.</p>
                         <h4>Training the models</h4>
-                        <p>The annotated data were then used to train a recognition-model on the same software, although in the downloaded version. Two models were trained, both having as <b>Traning Set</b> the whole 16 chapters from "Billy Budd" and as <b>Validation Set</b> the pages from "RIP Van Winkle's Lilac", however to one of the two a <b>base model</b> 
-                            for English handwriting was added to refine the recognition process.<br>Both models were trained relying on the PyLaia HTR engine supported by Transkribus and the paramethers were defined according to Transkribus guidelines on <a href="https://readcoop.eu/transkribus/howto/how-to-train-a-handwritten-text-recognition-model-in-transkribus/">How To Train and Apply Handwritten Text Recognition Models in Transkribus</a>. 
-                            For both models we sticked to a default early stopping of 50 epochs and a learning rate of 0,0001%, while for the model training with the addition of the English handwriting base model the total number of epochs was lowered from 250 to 150 according to the already high number of training data.<br><p> 
+                        <p>The annotated data were then used to train two recognition-model on the same software:</p>
+                        <ul>
+                            <li><b><i>Melville Handwriting</i></b> was trained having as <b>Traning Set</b> the whole 16 chapters from "Billy Budd" and as <b>Validation Set</b> the pages from "RIP Van Winkle's Lilac"</li>
+                            <li><b><i>Melville Handwriting Base Model</i></b> trained and validated on the same sets, but with the addition of an English Handwriting model provided by <i>Transkribus</i> to refine the recognition process</li>
+                        </ul>
+                            
+                        <p>Both models were trained relying on the PyLaia HTR engine supported by Transkribus and the paramethers were defined according to Transkribus guidelines on <a href="https://readcoop.eu/transkribus/howto/how-to-train-a-handwritten-text-recognition-model-in-transkribus/">How To Train and Apply Handwritten Text Recognition Models in Transkribus</a>. 
+                            For both models we sticked to a default early stopping of 50 epochs and a learning rate of 0,0001%, whit the only difference that for <i>Melville Handwriting Base Model</i> the total number of epochs was lowered from 250 to 150 to avoid overfitting.<p> 
                         
                         <div class="table-responsive-lg">
                             <table class="table">
@@ -344,7 +349,7 @@
                         </div>
                         <p style="padding-top: 20px">In the graphs the blue line represents the progress made by the model on the the Training Set whereas the red one represents the progress of evaluations on the Validation Set, on which the program tests itself after the training. 
                             The trend and final value of the CER for the Validation Set is of course the most significant as it shows how the model is capable of generalising, performing on pages that it has not been trained on. 
-                            The results of the model trained with the addition of the English handwriting Base Model are slightly better performative than the one of the other model, as a CER of 10% or below can be seen as very efficient for automated transcription; however even the model with no addition staying with a CER lower than 20% is more than sufficient to work with and couuld definitely be improved with further work.<p>
+                            The results of <i>Melville Handwriting Base Model</i> are slightly better performative than the one of the other model, as a CER of 10% or below can be seen as very efficient for automated transcription; however even <i>Melville Handwriting</i> staying with a CER lower than 20% is more than sufficient to work with and couuld definitely be improved with further work.<p>
                             <div class="table-responsive-lg">
                                 <table class="table">
                                     <thead>
