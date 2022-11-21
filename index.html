@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,1,0" />
+
         <script>
             function initComparisons() {
               var x, i;
@@ -168,13 +170,12 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>The transcription pipeline</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
                     </div>
                     <div class="col-lg-8">
                         <h3>Task definition</h3>
                             <p class="minor">In this project's pipeline, the task definition step was fundamental: to perform <b>supervised training</b> on a ML model such as ours, it was crucial to first provide it with an <b>annotated corpus</b> to be used as a training set and a <b>raw corpus</b> for the evaluation phase.</p>
                         <h4>Corpus selection</h4>
-                            <p>When selecting our starting corpus, we have decided to <b>reuse the data of the <a href="https://mel.netlify.app/">Melville Electronic Library</a></b>: we have selected 16 chapters from <b>"Versions of Billy Budd"</b>, an edition comprising not only the reading text but also MEL's TextLab platform, displaying all manuscript leaves and their diplomatic transcription to be used as our training corpus, while digital images of the <b>"Rip Van Winkle's Lilac"</b> manuscript were adopted as the validation set.
+                            <p>When selecting our starting corpus, we have decided to <b>reuse the data of the <a href="https://mel.netlify.app/">Melville Electronic Library</a></b>: we have selected <b>16 chapters from "Versions of Billy Budd"</b>, an edition comprising not only the reading text but also MEL's TextLab platform, displaying all manuscript leaves and their diplomatic transcription to be used as our training corpus, while digital images of the <b>"Rip Van Winkle's Lilac"</b> manuscript were adopted as the validation set.
                             </p>
                         <h4>Annotation Model</h4>
                             <p>Due to the complexity in interpreting the text from the manuscripts, given also the amount of data, we have decided to <b>rely on the transcriptions made available</b> by the MEL for the development of our training corpus.<br>
@@ -215,13 +216,13 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <p class="text-minor"><span class="material-symbols-outlined icon-align" id="zoom_in">zoom_in</span>Click on the pictures to zoom in!</p>
                                 </div>
                             
                         <h4>Annotation Guidelines</h4>
                             <p>We have followed <b><a href="https://readcoop.eu/transkribus/howto/transkribus-transcription-conventions/">Transkribus' Transcription Conventions</a></b>, adapting them to our data when needed.<br>
                             In particular, <b>strikethrough</b> and <b>superscript</b> text passages have proved to be a challenge.</p>
-                            <p><b>Strikethrough text passages</b></p>
-                            <div class="table-responsive-lg">
+                            <div class="table-responsive-lg"><b>Strikethrough text passages</b>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -232,17 +233,17 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/strikethrough_8-237.jpg" class="table-img" alt="Billy Budd, Ch. 8, pg. 237"></th>
-                                            <td class="table-txt">Always to be tagged as <code>strikethrough</code> when appearing inline with the rest of the text line</td>
+                                            <td class="table-txt">Always to be <b>tagged</b> as <code>strikethrough</code> when appearing <b>inline</b> with the rest of the text line</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/superstrike_8-243.jpg" class="table-img" alt="Billy Budd, Ch. 8, pg. 243"></th>
-                                            <td class="table-txt">When co-occurring with superscript, the latter tag is to be preferred</td>
+                                            <td class="table-txt">When <b>co-occurring</b> with <b>superscript</b>, the latter tag is to be preferred</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <p><b>Superscript text passages</b></p>
-                            <div class="table-responsive-lg">
+                            <br>
+                            <div class="table-responsive-lg"><b>Superscript text passages</b>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -253,24 +254,25 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/inlinesuper.jpg" class="table-img" alt="Billy Budd, Ch. 6, pg. 189"></th>
-                                            <td class="table-txt">When the x-height of the characters is included in the main line area, tag it as <code>superscript</code></td>
+                                            <td class="table-txt">When the <b>x-height</b> of the characters is <b>included</b> in the main line area, <b>tag</b> it as <code>superscript</code></td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/twolines_1-23.jpg" class="table-img" alt="Billy Budd, Ch. 1, pg. 53"></th>
-                                            <td class="table-txt">When the x-height of the characters is <i>not</i> included in the main line area add an extra line just for the superscript, considering it as normal text (with edge cases, it is preferred to add an extra line)</td>
+                                            <td class="table-txt">When the <b>x-height</b> of the characters is <b><i>not</i> included</b> in the main line area add an <b>extra line</b> just for the superscript, considering it as normal text (with edge cases, it is preferred to add an extra line)</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/fivespaces_6-1.jpg" class="table-img" alt="Billy Budd, Ch. 6, pg. 173"></th>
-                                            <td class="table-txt">With more than one superscript text, spaced out across the length of the main line, if there are no interruptions, consider the superscript words as part of the same extra line and add 5 blank spaces between them</td>
+                                            <td class="table-txt">With more than one superscript text, <b>spaced out</b> across the length of the main line, if there are <b>no interruptions</b>, consider the superscript words as part of the <b>same extra line</b> and add <b>5 blank spaces</b> between them</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><img src="assets/examples/nospaces_3-3.jpg" class="table-img" alt="Billy Budd, Ch. 3, pg. 121"></th>
-                                            <td class="table-txt">With more than one superscript text, spaced out across the length of the main line, if there are interrputions (e.g. another superscript word is included in the main line area), add different extra lines for each superscript word</td>
+                                            <td class="table-txt">With more than one superscript text, spaced out across the length of the main line, if there are <b>interruptions</b> (e.g. another superscript word is included in the main line area), add <b>different extra lines</b> for each superscript word</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            We have also put in place our own decisions when it came to <b>underlined text passages</b> (which we have ignored) and <b>additions</b> (<u>see</u>: Annotation Model section). 
+                            <p class="text-minor"><span class="material-symbols-outlined icon-align" id="zoom_in">zoom_in</span>Click on the pictures to zoom in!</p>
+                            <p>We have also put in place our own decisions when it came to <b>underlined text passages</b> (which we have ignored) and <b>additions</b> (<u>see</u>: Annotation Model section). 
                             </p>
                         <h4>Evaluation of results</h4>
                         <p>First, each of us processed 10 leaves of the Billy Budd's manuscript on Transkribus, doing both the layout parsing and the transcription. Then, we swapped the datasets and checked whether we agreed with the decision of the other annotator or not. In case of disagreement, we have discussed and changed our annotating and transcription parameters accordingly. This was also our <b>first pilot campaign</b>, whose results are described further on.</p>
@@ -281,12 +283,12 @@
                             <ol>
                                 <li>The <b>first</b> one, on 20 leaves of the manuscript (specifically, the leaves 1-10 of the first and second chapters), led to the following adjustments:
                                     <ul>
-                                        <li>How to handle superscript and strikethrough text passages</li>
-                                        <li>How to handle text not transcribed by MEL's experts: we do not include it in the text region and avoid transcribing it ourselves</li>
-                                        <li>Keep the different dashes as in the MEL's transcriptions in order to avoid confusion between composed words (short dash: -) and other occurrences (long dash: —)</li>
+                                        <li>How to handle <b>superscript</b> and <b>strikethrough</b> text passages</li>
+                                        <li>How to handle <b>text not transcribed by MEL's experts</b>: we do not include it in the text region and avoid transcribing it ourselves</li>
+                                        <li>Keep the different <b>dashes</b> as in the MEL's transcriptions in order to avoid confusion between composed words (short dash: -) and other occurrences (long dash: —)</li>
                                     </ul>
                                 </li>
-                                <li>The <b>second pilot</b> was carried out on 20 other leaves of the manuscript (11-20 of the first chapter, 11-14 of the second and 1-6 of the fourth chapter) and allowed us to better define how to handle multiple spaced out superscript text passages
+                                <li>The <b>second pilot</b> was carried out on 20 other leaves of the manuscript (11-20 of the first chapter, 11-14 of the second and 1-6 of the fourth chapter) and allowed us to better define how to handle <b>multiple spaced out superscript</b> text passages
                                 </li>
                                 <li>The <b>third</b> and final <b>pilot</b> was carried out randomly during the first moments of the final annotation campaign: each of us selected random leaves annotated by the other and eventually discussed different decisions, further refining the annotation model</li>
                             </ol>
@@ -295,16 +297,15 @@
                     <div class="col-lg-8" id="campaign">
                         <h3>Campaign</h3>
                         <h4>Corpus Annotation</h4>
-                        <p>Once the two annotators reached an agreement on how to follow the guidelines derived from the previous pilots, the proper annotation campaign finally began, with the annotation of the remainder of the selected corpus. Chapters from 1 to 16 of Melville's "Billy Budd" and the last 7 pages of "Rip Van Winkle's Lilac" containing the homonymous poem were fully annotated, using the online software Transkribus Lite and reaching a total of 175 pages and more than 17000 words.</p>
+                        <p>Once the two annotators reached an agreement on how to follow the guidelines derived from the previous pilots, the proper annotation campaign finally began, with the annotation of the remainder of the selected corpus. Chapters from 1 to 16 of Melville's "Billy Budd" and the last 7 pages of "Rip Van Winkle's Lilac" containing the homonymous poem were fully annotated, using the <b>online software Transkribus Lite</b> and reaching a total of <b>175 pages</b> and more than <b>17000 words</b>.</p>
                         <h4>Training the models</h4>
-                        <p>The annotated data were then used to train two recognition-model on the same software:</p>
+                        <p>The annotated data were then used to train two recognition-models on the same software:</p>
                         <ul>
-                            <li><b><i>Melville Handwriting</i></b> was trained having as <b>Traning Set</b> the whole 16 chapters from "Billy Budd" and as <b>Validation Set</b> the pages from "Rip Van Winkle's Lilac"</li>
-                            <li><b><i>Melville Handwriting Base Model</i></b> trained and validated on the same sets, but with the addition of an English Handwriting model provided by <i>Transkribus</i> to refine the recognition process</li>
+                            <li><b><i>Melville Handwriting</i></b> was trained having as traning set the whole 16 chapters from "Billy Budd" and as validation set the pages from "Rip Van Winkle's Lilac"</li>
+                            <li><b><i>Melville Handwriting Base Model</i></b> trained and validated on the same sets, but with the addition of an <b>"English Handwriting" model</b> provided by Transkribus to refine the recognition process</li>
                         </ul>
                             
-                        <p>Both models were trained relying on the PyLaia HTR engine supported by Transkribus and the paramethers were defined according to Transkribus guidelines on <a href="https://readcoop.eu/transkribus/howto/how-to-train-a-handwritten-text-recognition-model-in-transkribus/">How To Train and Apply Handwritten Text Recognition Models in Transkribus</a>. 
-                            For both models we sticked to a default early stopping of 50 epochs and a learning rate of 0,0001%, whit the only difference that for <i>Melville Handwriting Base Model</i> the total number of epochs was lowered from 250 to 150 to avoid overfitting.<p> 
+                        <p>Both models were trained relying on the <b>PyLaia HTR engine</b> supported by Transkribus and the paramethers were defined according to Transkribus guidelines: <a href="https://readcoop.eu/transkribus/howto/how-to-train-a-handwritten-text-recognition-model-in-transkribus/">"How To Train and Apply Handwritten Text Recognition Models in Transkribus"</a>.<br>For both models we sticked to a default <b>early stopping of 50 epochs</b> and a <b>learning rate of 0,0001%</b>, with the only difference being that, for <b><i>Melville Handwriting Base Model</i></b>, the total <b>number of epochs was lowered</b> from 250 to 150 to avoid overfitting.<p> 
                         
                         <div class="table-responsive-lg">
                             <table class="table">
@@ -336,8 +337,7 @@
                                 </tbody>
                             </table>
                         </div>        
-                
-                        <p>The accuracy of the resulting two models can be compared by analysing their Learning Curve (shown in the graphs below) indicating the variation of the <b>Character Error Rate</b> (i.e. the percentage of characters that have been transcribed incorrectly by the Text Recognition model) for number of epochs.</p>
+                        <p>The <b>accuracy</b> of the resulting two models can be compared by analysing their Learning Curves (shown in the graphs below) indicating the variation of the <b>Character Error Rate</b> (i.e. the percentage of characters that have been transcribed incorrectly by the Text Recognition model) for number of epochs.</p>
                         <div class="img-comp-container">
                             <div class="img-comp-img">
                               <img src="assets/training/MelvilleHandwriting3.1_Graph.jpg" height="290">
@@ -346,9 +346,9 @@
                               <img src="assets/training/MelvilleHandwritingBased.jpg" height="290">
                             </div>
                         </div>
-                        <p style="padding-top: 20px">In the graphs the blue line represents the progress made by the model on the the Training Set whereas the red one represents the progress of evaluations on the Validation Set, on which the program tests itself after the training. 
-                            The trend and final value of the CER for the Validation Set is of course the most significant as it shows how the model is capable of generalising, performing on pages that it has not been trained on. 
-                            The results of <i>Melville Handwriting Base Model</i> are slightly better performative than the one of the other model, as a CER of 10% or below can be seen as very efficient for automated transcription; however even <i>Melville Handwriting</i> staying with a CER lower than 20% is more than sufficient to work with and could definitely be improved with further work.<p>
+                        <p style="padding-top: 20px">In the graphs the <b>blue line</b> represents the progress made by the model <b>on the the training set</b>, whereas the <b>red</b> one represents the progress of evaluations <b>on the validation set</b>, on which the program tests itself after the training.<br> 
+                            The trend and final value of the <b>CER on the validation set</b> is of course the most significant as it shows how the model is capable of <b>generalising</b>, performing on pages that it has not been trained on.</p>
+                        <p>The results of <i>Melville Handwriting Base Model</i> are slightly better performative than the one of the other model, as a CER of 10% or below can be seen as very efficient for automated transcription; however even <i>Melville Handwriting</i> staying with a CER lower than 20% is more than sufficient to work with and could definitely be improved with further work.<p>
                             <div class="table-responsive-lg">
                                 <table class="table">
                                     <thead>
@@ -379,9 +379,10 @@
                                     </tbody>
                                 </table>
                             </div>
+                        <br>
                         <h4>Critical Issues</h4>
-                        <p>Comparing the transcription made on the Validation Set by the annotators and by the transcription models some criticalities jump to the eyes and are worth being highlightened. As shown in the comparison below (annotators' transcription -green- and trained model without base model -red-) on the first page of "Rip Van Winkle's Lilac" it is clear that despite being correctly tagged during the annotation campaign, nor strikethroughs nor superscripts have been correctly recognized by the model during the training.</p>
-                        <div class="img-comp-container">
+                        <p>Comparing the transcriptions made on the validation set by the annotators and by the trained models, some criticalities emerged and are worth being highlightened.<br>As shown in the comparison below (annotators' transcription -green- and trained model without base model -red-) on the first page of "Rip Van Winkle's Lilac" it is clear that despite being correctly tagged during the annotation campaign, <b>neither strikethroughs nor superscripts have been correctly recognized</b> by the model during the training.</p>
+                        <div class="img-comp-container" style="height: 225px">
                             <div class="img-comp-img">
                               <img src="assets/training/CompareFalse.jpg" height="200">
                             </div>
@@ -390,7 +391,7 @@
                             </div>
                         </div>
                         <h4>Further work</h4>
-                        <p>Certainly, this is only the beginning of what could be a much more extent campaign on Melville's original manuscripts. The limited dimensions of our team and, consequently, of the corpus we annotated <b><i>(of the work we were able to manage?)</i></b>, definitely prevented us from tackling a more in-depth research on the topic. Some improvements could certainly be made by <b>expanding the training corpus</b> and by <b>using HQ images</b> (we could only take screenshots from MEL's website, as there is no download tool made available).<br>However, we are fairly convinced that this project could stand as an inspiring push towards authorial annotation campaigns by means of AI and ML systems.</p>
+                        <p>Certainly, this is only the beginning of what could be a much more extent campaign on Melville's original manuscripts. The limited dimensions of our team and, consequently, of the corpus we annotated, definitely prevented us from tackling more in-depth research on the topic. Some improvements could certainly be made by <b>expanding the training corpus</b> and by <b>using HQ images</b> (we could only take screenshots from MEL's website, as there is no download tool made available).<br>However, we are fairly convinced that this project could stand as an inspiring push towards authorial annotation campaigns by means of AI and ML systems.</p>
                     </div>
                     <div class="col-lg-8" id="pubUse">
                         <h3>Publication and use</h3>

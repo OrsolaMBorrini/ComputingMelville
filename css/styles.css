@@ -518,6 +518,10 @@ progress {
   font-weight: 300;
 }
 
+.text-minor {
+  font-size: 0.9rem;
+}
+
 .subtitle {
   font-size: 1.1rem;
   font-weight: 300;
@@ -11432,7 +11436,7 @@ section {
 
 .relative-sh {
   position: absolute;
-  top: 750%;
+  top: 900%;
   left: 0%;
   width: 20%;
   height: auto;
@@ -11519,12 +11523,16 @@ section {
   }
 }
 
+/* Zoom in icon */
+#zoom_in {
+  color: rgb(38 82 177);
+}
+
 
 /* Download icon */
 .icon-align {
   vertical-align: middle;
 }
-
 
 /* Team section */
 
